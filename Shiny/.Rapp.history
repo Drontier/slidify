@@ -1,0 +1,306 @@
+Idaho <- read.table("./data/Idaho.csv", sep = ",", header = TRUE)
+head(Idaho)
+agrilcultureLogical <- Idaho[which(AGS == 6 & ACR == 3),]
+agrilcultureLogical <- Idaho[which("AGS" == 6 & "ACR" == 3),]
+agrilcultureLogical
+?which()
+Idaho[(Idaho$AGS = 6 & Idaho$ACR = 3),]
+Idaho[(Idaho$AGS == 6 & Idaho$ACR == 3),]
+aggrp <- Idaho[(Idaho$AGS == 6 & Idaho$ACR == 3),]
+which(aggrp)
+agrilcultureLogical <- Idaho[which(Idaho$AGS == 6 & Idaho$ACR == 3),]
+which(agrilcultureLogical)
+agrilcultureLogical <- Idaho[which(Idaho$AGS = 6 & Idaho$ACR = 3),]
+agricultureLogical <- Idaho[which(Idaho$AGS == 6 & Idaho$ACR == 3),]
+which(agricultureLogical)
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv "#
+download.file(fileUrl, destfile = "./data/GDP.csv", method = "curl")
+GDP <- read.table("./data/GDP.csv", sep = ",", header = TRUE)
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"#
+download.file(fileUrl, destfile = "./data/GDP.csv", method = "curl")
+0      0 --:--:-- --:--:-- --:--:--     0#
+#
+> GDP <- read.table("./data/GDP.csv", sep = ",", header = TRUE)
+GDP <- read.table("./data/GDP.csv", sep = ",", header = TRUE)
+set.seed(1)
+rpois(5,2)
+set.seed(1)
+rpois(5,2)
+set.seed(10)
+x <- rbinom(10,10,0.5)
+e <- rnorm(10,0,20)
+y <- 0.5 + 2*x + e
+?jpeg()
+?postscript()
+?xfig()
+?windows()
+?jpeg()
+library(nlme)
+library(lattice)
+xyplot(weight ~ Time | Diet, BodyWeight)
+library(lattice)
+library(datasets)
+data(airquality)
+?lpoints()
+?lines()
+?points()
+?axis()
+library(datasets)
+data(airquality)
+qplot(Wind, Ozone, data=airquality)
+library(ggplot2)
+install.packages("ggplot2")
+library(ggplot2)
+qplot(Wind, Ozone, data=airquality)
+qplot(Wind, Ozone, data=airquality, facets = . ~ factor(Month))
+qplot(Wind, Ozone, data=airquality, geom = "smooth")
+airquality = transform(airquality, Month = factor(Month))
+qplot(Wind, Ozone, data = airqualit , facets = . ~ Month)
+qplot(Wind, Ozone, data = airquality, facets = . ~ Month)
+g <- ggplot(movies, aes(votes,rating))
+print(g)
+qplot(votes, rating, data= movies)
+qplot(votes, rating, data= movies) + geom_smooth()
+qplot(votes, rating, data= movies) + stats_smooth("loess")
+qplot(votes, rating, data= movies, smooth = "loess")
+qplot(votes, rating, data= movies, panel = panel.loess)
+library(nlme)
+library(lattice)
+xyplot(weight ~ Time | Diet, BodyWeight)
+getwd()
+setwd("")
+setwd(..)
+getwd()
+getwd(/)
+getwd("..")
+setwd("..")
+getwd()
+ls
+setwd("Reproducible Research")
+getwd()
+fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"#
+download.file(fileUrl, destfile = "./data/fitbit.zip", method = "curl")#
+unzip("./data/fitbit.zip", list = FALSE, overwrite = TRUE,#
+      junkpaths = FALSE, exdir = "./data", unzip = "internal",#
+      setTimes = FALSE)#
+#
+fitbit <- read.csv("./data/activity.csv", sep = ",", header = TRUE)#
+#
+for (i in unique(fitbit$date)){#
+print(i)#
+}
+for (i in unique(fitbit$date)){#
+print(i)#
+datestep <- fitbit$steps[date == i]#
+sum(datestep)#
+}
+for (i in unique(fitbit$date)){#
+print(i)#
+datestep <- fitbit$steps[fitbit$date == i]#
+sum(datestep)#
+}
+sum(datestep)
+for (i in unique(fitbit$date)){#
+print(i)#
+datestep <- fitbit$steps[fitbit$date == i]#
+sum(datestep, remove.NA = TRUE)#
+}
+sum(datestep, remove.NA = TRUE)
+for (i in unique(fitbit$date)){#
+print(i)#
+datestep <- fitbit$steps[fitbit$date == i]#
+sum(datestep, na.rm = TRUE)#
+}
+sum(datestep, na.rm = TRUE)
+head(fitbit)
+for (i in unique(fitbit$date)){#
+print(i)#
+newstats <- fitbit[date==i]#
+}
+for (i in unique(fitbit$date)){#
+print(i)#
+newstats <- fitbit[fitbit$date==i]#
+}
+for (i in unique(fitbit$date)){#
+print(i)#
+newstats <- fitbit[date==i]#
+}
+for (i in unique(fitbit$date)){#
+cbind(i)#
+#
+}
+head(fitbit)
+end(fitbit)
+?head()
+tail(fitbit)
+for (i in unique(fitbit$date)){#
+rbind(i)#
+#
+}
+head(fitbit)
+tail(fitbit)
+newdata <- dcast(fitbit, date ~ steps)
+library(reshape2)
+newdata <- dcast(fitbit, date ~ steps)
+head(newdata)
+tail(newdata)
+?dcast()
+library(airquality)
+names(airquality) <- tolower(names(airquality))
+agm <- melt(airquality, id=c("month", "day"), na.rm=TRUE)
+agm
+newdata <- dcast(fitbit, date ~ steps, length)
+newdata
+head(newdata)
+newdata <- dcast(fitbit, date ~ variable)
+head(newdata)
+tapply(fitbit$steps,fitbit$date,sum)
+graph <- tapply(fitbit$steps,fitbit$date,sum)
+?hist()
+hist(graph)
+graph <- tapply(fitbit$steps, fitbit$date, sum)
+graph <- transform(graph, date = factor(date))
+histogram(graph)
+hist(graph)
+hist(graph, steps, date)
+hist(graph, fitbit$steps, fitbit$date)
+hist(fitbit, fitbit$steps, fitbit$date)
+df = {}
+df <- graph
+df
+summary(graph)
+head(graph)
+dim(graph)
+hist(graph, breaks = 61)
+df
+graph <- names(tapply(fitbit$steps, fitbit$date, sum))
+head(graph)
+hist(graph)
+alldates <- names(tapply(fitbit$steps, fitbit$date, sum))
+alldates
+hist.data <- data.frame(alldates, df)
+hist.data
+data.frame(df)
+hist(df)
+graph <- names(tapply(fitbit$steps, fitbit$date, sum))
+data.frame(graph)
+df = {}
+graph = {}
+graph <- names(tapply(fitbit$steps, fitbit$date, sum))
+data.frame(graph)
+hist.data <- (alldates, graph)
+hist.data <- data.frame(alldates, graph)
+hist.data
+hist.data <- data.frame(alldates, df)
+df = {}
+graph <- df
+graph <- tapply(fitbit$steps,fitbit$date,sum)
+df(summary)
+summary(df)
+summary(graph)
+head(df)
+hist(graph)
+?hist()
+hist(graph, breaks = 10, xlab = "Steps", main = paste("Steps Taken"))
+hist(graph, breaks = 10, xlab = "Steps taken per day", main = paste("Histogram of Steps"))
+data.frame(df)
+graph <- tapply(fitbit$steps,fitbit$date,sum)
+graph
+mean(graph)
+mean(graph, na.rm=TRUE)
+median(graph, na.rm=TRUE)
+is.na(graph)
+is.na(steps)
+is.na(fitbit$steps)
+sum(is.na(fitbit$steps))
+fitbit
+head(fitbit)
+routine <- tapply(fitbit$steps,fitbit$interval, mean)
+routine
+routine <- tapply(fitbit$steps,fitbit$interval, mean, na.rm=TRUE)
+routine
+intervaltime <- names(tapply(fitbit$steps,fitbit$interval, mean, na.rm=TRUE))
+intervaltime
+?plot()
+plot(fitbit, type = "l", xlab="intervaltime", ylab="steps")
+plot(routine~intervaltime, type = "l", xlab="intervaltime", ylab="steps", col = "red")
+?plot()
+plot(routine~intervaltime, type = "l", xlab="Interval", ylab="Average Steps", col = "red", main = paste("Daily Routine"))
+max(routine)
+max(interval)
+max(intervaltime)
+f = function(x) {#
+        x[is.na(x)] = mean(x, na.rm=TRUE)#
+}#
+ss = data.frame(apply(fitbit,2,f))
+f = function(x) {#
+        x[is.na(x)] = mean(x, na.rm=TRUE)#
+}
+ss = data.frame(apply(df,2,f))
+ss = data.frame(apply(fitbit,2,f))
+head(ss)
+ss
+fitbit$steps[is.na(fitbit$steps)] <- with(fitbit, ave(steps, interval, #
+   FUN = function(x) mean(x, na.rm = TRUE)))[is.na(fitbit$steps)]
+head(fitbit)
+hist(fitbit)
+newdata <-fitbit
+head(newdata)
+newgram <- tapply(newdata$steps,newdata$date,sum)
+hist(newgram, breaks = 10, xlab = "Steps taken per day", main = paste("Histogram of Steps"))
+newmeansteps <- mean(newgram, na.rm=TRUE)
+newmeansteps
+newmediansteps <- median(newgram, na.rm=TRUE)
+newmediansteps
+meansteps
+?weekdays()
+Weekday <- weekdays(newdata$date)
+library(knitr)
+knit2html(PA1_template.Rmd)
+?knit2html()
+if(!file.exists("./data")){dir.create("./data")}#
+fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2"#
+download.file(fileUrl, destfile = "./data/storm.zip", method = "curl")#
+unzip("./data/storm.zip", list = FALSE, overwrite = TRUE,#
+      junkpaths = FALSE, exdir = "./data", unzip = "internal",#
+      setTimes = FALSE)
+ppois(10, lambda = 5*3)
+qt(.975, 8)
+qt(.9,8)
+qt(.975,8)
+install.packages("UsingR")
+-((95/110)*log2(95/110)+(15/110)*log2(15/110))*110/85-((55/75)*log2(55/75)+(20/75)*log2(20/75))*75/185
+-((80/95)*log2(80/95)+(15/95)*log2(15/95))*95/150-((35/55)*log2(35/55)+(20/55)*log2(20/55))*55/150
+250/275
+library(swirl)
+install.packages("swirl")
+library(swirl)
+library(caret)
+install.packages("caret")
+install.packages("ggplot2")
+library(shiny)
+install.packages("shiny")
+library(shiny)
+shinyUI(pageWithSidebar(
+headerPanel("Data science FTW!"),
+sidebarPanel(
+h3('Sidebar text')
+),
+mainPanel(
+h3('Main Panel text')
+)
+))
+library(shiny)
+shinyServer(
+function(input, output) {
+}
+)
+shinyServer(
+function(input, output)  {
+}
+)
+getwd()
+setwd(Shiny)
+setwd("/Users/ericpei/Desktop/Shiny")
+getwd()
+runApp()
